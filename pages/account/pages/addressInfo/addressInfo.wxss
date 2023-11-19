@@ -1,0 +1,17 @@
+/* pages/account/pages/addressInfo/addressInfo.wxss */
+.addressInfo_container{
+    height: 100vh;
+    
+    
+}
+.address_checkBoxWarpper{
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.address_checkBox{
+    font-size: 14px;
+}
+.addressInfo_submitBtn{
+    padding: 0 15px;
+    margin-top: 20px;
+}

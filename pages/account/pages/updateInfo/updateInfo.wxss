@@ -1,0 +1,23 @@
+/* pages/account/pages/updateInfo/updateInfo.wxss */
+.updateInfo_container{
+    padding:20px 10px;
+    
+    border-top: 1px solid rgb(221, 221, 221);
+}
+.updateInfo_avatar{
+    display: flex;
+    padding: 0 15px;
+    color: rgb(88, 88, 88);
+}
+.infoLabel{
+    font-size: 14px;
+}
+.updateBox{
+    margin-left: 40px;
+}
+.updateInfo_divider{
+    margin: 10px 0;
+}
+.updateInfo_submitBtn{
+    margin-top: 30px;
+}

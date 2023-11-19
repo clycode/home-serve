@@ -1,0 +1,66 @@
+/* pages/account/pages/adress/adress.wxss */
+.address_container{
+    height: calc(100vh - 110px);
+    background-color: #f1f1f1;
+
+}
+.address_btnContent{
+
+    padding: 10px;
+}
+.address_list{
+}
+.address_item{
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+
+}
+
+.address_userInfo{
+    display: flex;
+    height: 30px;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.address_infoPhone{
+    margin-left: 10px;
+}
+.address_detail{
+    font-size: 13px;
+    margin-top: 5px;
+    
+}
+.address_operate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+.address_checkBox{
+    font-size: 13px;
+}
+.address_action{
+    display: flex;
+    width: 140px;
+    font-size: 13px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 1px;
+}
+.address_icon{
+    width: 20px;
+    height: 20px;
+}
+.address_iconText{
+    position: relative;
+    margin-left: 5px;
+    top: -5px;
+}

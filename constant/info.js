@@ -1,0 +1,1 @@
+export const serviceList=['随时退','官方自营','即时服务']

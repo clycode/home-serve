@@ -1,0 +1,18 @@
+<!--pages/infomation/infomation.wxml-->
+<navigation-bar title="资讯列表" back="{{true}}" color="back"  background="#fff">
+    
+</navigation-bar>
+<scroll-view class="infomation_container" scroll-y="{{true}}">
+        <van-notice-bar
+            scrollable  
+            mode="link" 
+            bind:tap="toLink"
+            color="#1989fa"
+            background="#ecf9ff"
+            wx:for="{{infoList}}"
+            data-id="{{item.id}}"
+            wx:key="title"
+            left-icon="volume-o"
+            text="{{item.title}}"
+            />
+    </scroll-view>

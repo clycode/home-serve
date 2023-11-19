@@ -1,0 +1,132 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+.swiper{
+    height: 450rpx;
+}
+.index_Mainer{
+    margin-top: 5px;
+    padding:0 15px;
+}
+.service_infoDesc{
+}
+.home_swiperItem{
+}
+.home_swiperImg{
+    width: 100%;
+    height: 100%;
+    
+}
+.home_serviceWarpper{
+    padding: 15px 15px 0px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border: 1px solid rgb(230, 230, 230);
+    background-color: white;
+    top: -40px;
+    border-radius: 10px;
+}
+.home_serviceItem{
+    width:calc((100% - 45px) / 4);
+    margin-right: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.home_serviceItem:nth-child(4n){
+    margin-right: 0px;
+}
+.home_infoWarpper{
+    margin-top: 30px;
+}
+.home_serviceIconBox{
+    padding: 10px;
+    border-radius: 10px;
+}
+.home_serviceIcon{
+    width: 30px;
+    height: 30px;
+    
+}
+.home_serviceTitle{
+    font-size: 12px;
+    margin-top: 8px;
+    color: rgb(97, 97, 97);
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+}
+
+.home_allBtn .home_serviceIconBox{
+    background-color: rgb(209, 111, 209);
+
+}
+.home_infoWarpper{
+    position: relative;
+    top: -55px;
+}
+.home_infoWarpperTitle{
+    font-size: 30rpx;
+    font-weight: 500;
+    color: #353535;
+}
+.home_infoWarpperHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home_link{
+    font-size: 12px;
+    color: rgb(31, 115, 211);
+}
+.home_infoWarpperMainer{
+    margin-top: 20px;
+}
+.home_infoItem{
+    display: flex;
+    justify-content: flex-start;
+}
+.home_logoWarpper{
+    border: 2px solid rgb(58, 57, 57);
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.home_logo{
+    width: 30px;
+    height: 30px;
+}
+.home_infoData{
+    margin-left: 15px;
+    flex: 1;
+    position: relative;
+    top: 5px;
+}
+.home_infoName{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.home_infoTime{
+    font-size: 14px;
+    margin-top: 5px;
+    color: #6b6b6b;
+}
+.home_infoContent{
+    margin-top: 5px;
+    font-size: 13px;
+}

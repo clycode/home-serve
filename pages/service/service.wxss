@@ -1,0 +1,137 @@
+/* pages/service/service.wxss */
+.service_container{
+    height: calc(100vh - 80px)
+}
+.service_swiper{
+    height: 240px;
+    display: block;
+    border-bottom: 1px solid #e7e7e7;
+}
+.service_swiperImg{
+    width: 100%;
+}
+.service_info{
+    padding:10px 0;
+}
+.service_header{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.service_headerInfo{
+    flex: 1;
+    padding-right: 10px;
+}
+.service_collecIconWarpper{
+    width: 40px;
+    flex-shrink: 0;
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    position: relative;
+}
+.service_collecIconWarpper::after{
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translate(0,-50%);
+    background-color: #e7e7e7;
+    height: 90%;
+    width: 2px;
+    border-radius: 5px;
+}
+.service_collecIcon{
+    width: 30px;
+    height: 30px;
+}
+.service_collecText{
+    font-size: 12px;
+    margin-top: 5px;
+    color: #4e4e4e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.service_infoTitle{
+    font-size:20px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.service_infoDesc{
+    margin-top:5px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#929292;
+    word-wrap: break-word;
+}
+.service_infoPrice{
+    margin-top: 5px;
+}
+.service_infoDiscountPrice{
+    color: rgb(202, 0, 0);
+    font-weight: 500;
+    font-size: 18px;
+}
+.service_infoOriginPrice{
+    margin-left: 5px;
+    text-decoration: line-through;
+    font-size: 16px;
+    color: #b4b4b4;
+}
+
+.service_infoServe{
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+.service_serveList{
+    background-color: rgb(0, 255, 255);
+    margin: 5px 0;
+    background-color: rgb(252, 241, 227);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.service_serveItem{
+    font-size: 12px;
+    margin:5px 10px 5px 0;
+    padding: 4px;
+    border-radius: 5px;
+    color: rgb(250, 167, 58);
+    border: 1px solid rgb(250, 167, 58);
+}
+.service_infoContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.service_infoContentTitle{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    box-shadow: 0px 0 5px rgb(238, 238, 238);
+}
+.service_infoContentBox{
+    margin-top: -2px;
+    width: 100%;
+    padding: 10px;
+}
+.service_infoContentBox image{
+    width: 100vw;
+}
+

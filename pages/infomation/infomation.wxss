@@ -1,0 +1,5 @@
+/* pages/infomation/infomation.wxss */
+.infomation_container{
+    height:calc(100%  - 80px);
+    border-top: 1px solid rgb(226, 225, 225);
+}

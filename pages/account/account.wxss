@@ -1,0 +1,79 @@
+/* pages/account.wxss */
+.account_Container{
+    height: 100vh;
+    background-color: #f5f5f5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.account_Header{
+    height: 250rpx;
+    background: linear-gradient(135deg, #1296db,#ffa793 );
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    padding:30px 0px 20px 20px;
+
+}
+.account_Header_info{
+    display: flex;
+    align-items: center;
+}
+.account_Header_avatar{
+    height: 120rpx;
+    width: 120rpx;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid rgb(223, 223, 223);
+}
+.account_Header_nickName{
+    color: #fff;
+    font-size: 38rpx;
+    margin-left: 20px;
+    font-weight: 900;
+}
+.account_Mainer{
+    flex: 1;
+}
+.account_Mainer_Menu{
+    position: relative;
+   
+    top: -50px;
+    box-shadow: 0px 0px 5px rgb(211, 211, 211);
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    padding: 10rpx 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.account_Mainer_MenuItem{
+    height:50px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.account_Mainer_MenuItem{
+    border-bottom: 1px solid #e0e0e0;
+    position: relative;
+}
+.account_Mainer_MenuItem:last-child{
+    border: none;
+}
+.account_Mainer_Icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.account_Mainer_rightIcon{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.login_btn{
+    text-align: center;
+}

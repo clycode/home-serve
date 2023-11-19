@@ -1,0 +1,16 @@
+/* pages/order/order.wxss */
+.order_container{
+    height: 100vh;
+    width: 100%;
+    background-color: #e4e4e4;
+
+}
+.order_itemWarpper{
+    height: calc(100vh - 120px);
+    margin-bottom: 20px;
+}
+.order_deep{
+    text-align: center;
+    font-size: 14px;
+    color: rgb(128, 128, 128);
+}

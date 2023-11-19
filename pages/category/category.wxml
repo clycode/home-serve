@@ -1,0 +1,16 @@
+<!--pages/category/category.wxml-->
+<navigation-bar title="分类" back="{{false}}" color="black"  background="#fff"></navigation-bar>
+<scroll-view class="category_container" scroll-y="{{true}}">
+    <view class="category_list">
+        <view class="category_item" wx:for="{{categoryList}}" wx:key="id" style="background:linear-gradient(90deg,{{item.iconBgColor}},rgb(253, 247, 247) )" >
+            <navigator class="categoryItem_nav" target="self" url="/pages/service/service?id={{item.id}}">
+            <image src="{{item.iconUrl}}"  class="categortItem_icon"></image>
+            <view class="categoryItem_info">            
+                <text class="categortItem_title ellipsis-2" >{{item.title}}</text>
+                <text class="categortItem_desc ellipsis-2" >{{item.desc}}</text>
+            </view>
+   </navigator>
+
+        </view>
+    </view>
+</scroll-view>

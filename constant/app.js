@@ -1,0 +1,1 @@
+export const appName='E家助手'

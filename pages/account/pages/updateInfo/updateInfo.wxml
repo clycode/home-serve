@@ -1,0 +1,21 @@
+<navigation-bar title="修改信息" back="{{true}}" color="black"  background="#fff"></navigation-bar>
+<view class="updateInfo_container">
+        <view class="updateInfo_avatar">
+            <view class="infoLabel">用户头像</view>
+            <van-uploader bind:delete="onDelete"  max-count="1" bind:after-read="afterRead" class="updateBox" file-list="{{ fileList }}" />
+        </view>
+        <van-divider class="updateInfo_divider" />
+        <van-field
+            model:value="{{  nickName}}"
+            maxlength="{{10}}"
+            clearable
+            label="用户名"
+            border="{{false}}"
+            placeholder="请输入用户名"
+        />
+        <van-divider class="updateInfo_divider" />
+        <view class="updateInfo_submitBtn">
+            <van-button loading='{{loading}}' bind:tap="onSubmit"  block type="info" plain round>保存</van-button>
+        </view>
+
+</view>

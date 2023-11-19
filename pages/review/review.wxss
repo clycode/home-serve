@@ -1,0 +1,24 @@
+/* pages/review/review.wxss */
+.review_container{
+    height: calc(100vh - 60px);
+    padding:20px 10px;
+
+}
+.review_rate{
+    display: flex;
+    padding-bottom: 5px;
+    margin:0 15px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    align-items: center;
+    margin-bottom: 10px;
+}
+.review_rateLable{
+    font-size: 14px;
+    color:#646464;
+    width: 40px;
+    margin-right: 10px;
+    
+}
+.review_btn{
+    margin-top: 30px;
+}

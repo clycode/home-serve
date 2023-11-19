@@ -1,0 +1,56 @@
+<!--pages/account/pages/addressInfo/addressInfo.wxml-->
+<navigation-bar animated="{{false}}"  title="{{addressId?'修改':'新增'}}地址" back="{{true}}" color="back"  background="#fff"></navigation-bar>
+<view class="addressInfo_container" >
+    <van-cell-group>
+  <van-field
+    model:value="{{ userName }}"
+    clearable
+    label="姓名"
+    maxlength="{{5}}"
+    placeholder="请输入姓名"
+  />
+
+  <van-field
+  model:value="{{ phone }}"
+    label="联系电话"
+    maxlength="{{11}}"
+
+    placeholder="请输入联系电话"
+  />
+  <van-field
+  model:value="{{ city }}"
+    type="phone"
+    label="所在地区"
+    placeholder-style="color:#000"
+    bind:click-input="onClickInput"
+    readonly
+    placeholder="请选择"
+  />
+  <van-field
+  model:value="{{ street}}"
+    type="phone"
+    label="详细地址"
+    maxlength="{{15}}"
+    placeholder="请输入详细地址"
+  />
+ 
+
+</van-cell-group>
+<view class="address_checkBoxWarpper">
+    <van-checkbox value="{{ isDefault }}" shape="square" class="address_checkBox" bind:change="onChange">
+    设置为默认地址
+    </van-checkbox>
+</view>
+<view class="addressInfo_submitBtn">
+    <van-button bind:click="onSunmit" loading="{{loading}}" block color="rgb(220, 55, 50)" round >立即保存</van-button>
+</view>
+<van-popup z-index="{{999999}}" show="{{ pickerShow }}"  bind:close="onClose"   position="bottom">
+    <van-area 
+    show-toolbar="{{true}}"
+    title="地区"
+    bind:cancel="onCancel"
+     bind:confirm="onAreaConfirm" area-list="{{ areaList }}"  />
+</van-popup>
+</view>
+
+<van-toast id="van-toast" />

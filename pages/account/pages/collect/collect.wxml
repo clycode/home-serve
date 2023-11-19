@@ -1,0 +1,25 @@
+<navigation-bar title="我的收藏" back="{{true}}" color="black"  background="#fff"></navigation-bar>
+<scroll-view scroll-y="{{true}}" class="account_collectContainer">
+<view wx:if="{{collectList && collectList.length!==0}}">
+    <view  wx:for="{{collectList}}" wx:key="{{id}}">
+    <van-card
+        price="{{item.service.discountPrice}}"
+        origin-price="{{item.service.originPrice}}"
+        desc="{{item.service.desc}}"
+        title="{{item.service.title}}"
+        link-type="reLaunch"
+        lazy-load="{{true}}"
+        thumb="{{ item.service.imagesUrl }}"
+>
+<view slot="footer">
+    <van-button type="info"  data-id="{{item.service.id}}" bind:tap="toLink" size="small" disabled="{{!item.service || item.service.status!=='1'}}">查看详情</van-button>
+    <van-button data-id="{{item.service.id}}"  style="margin-left: 10px;" plain size="small" bind:tap="handleClose" >取消收藏</van-button>
+  </view>
+</van-card>
+    </view>
+</view>
+<view wx:else>
+    <van-empty description="暂无收藏,请求添加叭" />
+</view>
+</scroll-view>
+<van-toast id="van-toast" />

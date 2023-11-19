@@ -1,0 +1,39 @@
+/* components/orderItem/OrderItem.wxss */
+.orderItem_container{
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+.orderItem_time{
+    border-bottom: 1px solid rgb(218, 218, 218);
+    padding-bottom: 10px;
+    font-size: 13px;
+    color: rgb(138, 138, 138);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.orderItem_Mainer{
+    padding-top: 10px;
+}
+.orderItem_serviceTitle{
+    font-size: 20px;
+    font-weight: 600;
+}
+.orderItem_lable{
+    font-size: 13px;
+    margin-top:8px;
+    color: rgb(138, 138, 138);
+}
+.orderItem_value{
+    color: black;
+    margin-left: 5px;
+}
+.orderItem_price{
+    color: rgb(197, 2, 2);
+    margin-left: 5px;
+    font-size: 16px;
+}

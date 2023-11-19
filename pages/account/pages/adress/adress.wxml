@@ -1,0 +1,46 @@
+<!--pages/account/pages/adress/adress.wxml-->
+<navigation-bar title="我的地址"  delta="{{1}}" back="{{true}}" color="back"  background="#fff"></navigation-bar>
+<scroll-view scroll-y="{{true}}" class="address_container">
+    <view wx:if="{{addressList.length>0}}" class="address_list">
+        <view wx:for="{{addressList}}"  wx:key="id" class="address_item" >
+        <view data-id="{{item.id}}"  bind:tap="onClick">
+            <view class="address_userInfo">
+                <view >
+                        服务信息 : {{item.userName}}
+                </view>
+                <view class="address_infoPhone">{{item.phone}}</view>
+            </view>
+            <view class="address_detail">服务地址: {{item.city}} {{item.street}}</view>
+        </view>
+
+            <van-divider />
+
+            <view class="address_operate">
+                <view>
+                    <van-checkbox data-id="{{item.id}}"  value="{{ item.isDefault }}" shape="square" class="address_checkBox" bind:change="onChange">
+    设置为默认地址
+    </van-checkbox>
+                </view>
+
+                <view class="address_action">
+                    <view>
+                        <navigator  url="/pages/account/pages/addressInfo/addressInfo?id={{item.id}}">
+
+                     <image class="address_icon" src="/public/account/icon-edit-address.png"></image> <text class="address_iconText">修改</text></navigator> </view>
+                    <view bind:tap="onDel" data-id="{{item.id}}">
+                        <image class="address_icon" src="/public/account/icon-delete-address.png"></image> 
+                        <text class="address_iconText" >删除</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view wx:else>
+        <van-empty description="暂无地址,请添加地址" />
+    </view>
+</scroll-view>
+<view class="address_btnContent"> 
+    <van-button bind:click="onAdd" round size="small" type="primary" block color="rgb(220, 55, 50)"  icon="location-o">添加新地址</van-button>
+</view>
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />

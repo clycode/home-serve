@@ -1,0 +1,10 @@
+<!--pages/infomationData/infomationData.wxml-->
+<navigation-bar title="资讯详情" back="{{true}}" color="back"  background="#fff">
+</navigation-bar>
+<scroll-view scroll-y="{{true}}" class="infomationdData_container">
+    <text class="infomationData_title">{{infoData.title}}</text>
+    <view class="infomationData_time">发布时间: {{infoData.createTime}}</view>
+    <view class="infomationData_content">
+        <rich-text nodes="{{infoData.content}}"></rich-text>
+    </view>
+</scroll-view>

@@ -1,0 +1,11 @@
+<!--pages/account/pages/about/about.wxml-->
+<navigation-bar title="关于我们" back="{{true}}" color="black"  background="#fff"></navigation-bar>
+<scroll-view scroll-y="{{true}}" class="about_container" >
+    <view class="about_warpper" wx:if="{{config}}">
+        <view class="about_title">{{config.title}}</view>
+        <rich-text nodes="{{config.content}}" class="about-content"></rich-text>
+    </view>
+    <view wx:else>
+        <van-empty description="空空如也" />
+    </view>
+</scroll-view>

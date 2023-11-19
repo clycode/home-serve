@@ -1,0 +1,33 @@
+<navigation-bar title="绑定登录信息" back="{{true}}" color="black"  background="#fff"></navigation-bar>
+<view class="loginInfo_container">
+    <van-cell-group>
+  <van-field
+    model:value="{{ phone }}"
+    label="手机号"
+    type="tel"
+    placeholder="请输入手机号"
+    error="{{phoneErr}}"
+    bind:change="onPhoneChange"
+    error-message="{{phoneErr?phoneTips:''}}"
+  />
+  <van-field
+    type="password"
+    model:value="{{ password }}"
+    label="密码"
+    error="{{passwordErr}}"
+    bind:change="onPasswordChange"
+    error-message="{{passwordErr?passwordTips:''}}"
+    placeholder="请输入密码"
+  />
+  <van-field
+    type="password"
+    model:value="{{ checkPassword }}"
+    label="确认密码"
+    placeholder="请输入确认密码"
+  />
+  <view class="loginInfo_Btn">
+    <van-button type="info" block plain bind:tap="onUpdateUserInfo">保存</van-button>
+  </view>
+</van-cell-group>
+<van-toast id="van-toast" />
+</view>

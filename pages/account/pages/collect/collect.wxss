@@ -1,0 +1,4 @@
+/* pages/account/pages/collect.wxss */
+.account_collectContainer{
+    height: calc(100vh - 70px);
+}

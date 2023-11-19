@@ -1,0 +1,34 @@
+<navigation-bar title="登录" back="{{true}}" homeButton="{{true}}" color="black"  background="#fff"></navigation-bar>
+<view class="login_Container">
+<view class="login_form">
+    <view class="form_title">E家助手</view>
+    <van-cell-group>
+    <van-field
+        model:value="{{ phone }}"
+        label="手机"
+        placeholder="请输入手机号码"
+        error="{{phoneErr}}"
+        bind:change="onPhoneChange"
+        error-message="{{phoneErr?phoneTips:''}}"
+    />
+    <van-field
+        model:value="{{ password}}"
+        label="密码"
+        type="password"
+        placeholder="请输入密码"
+    />
+    </van-cell-group>
+    <view class="btn_content">
+        <van-button type="primary" bind:tap="onLogin">登录</van-button>
+        <van-button class="wechat_btn" bind:tap="onWeChatLogin"><image src="/public/login/icon-wechat.png" class="wechat_icon"></image> 微信登录</van-button>
+    </view>
+    <view class="login_tips">注:第一次登录的用户请使用微信认证登录</view>
+    <van-dialog id="van-dialog" />
+    <van-overlay show="{{ showOverlay }}" >
+  <view class="login_wrapper">
+    <van-loading type="spinner" color="#1989fa" size="24px" >登录中...</van-loading>
+  </view>
+    </van-overlay>
+</view>
+</view>
+<van-toast id="van-toast" />

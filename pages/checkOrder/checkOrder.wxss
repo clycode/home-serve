@@ -1,0 +1,114 @@
+/* pages/checkOrder/checkOrder.wxss */
+.checkoutOrder_container{
+    height: calc(100vh - 10px);
+}
+.checkoutOrder_info{
+    height: 80%;
+    padding: 15px;
+    background:linear-gradient(180deg,rgba(241, 56, 10, 0.952),rgb(253, 247, 247) ) ;
+}
+.checkoutOrder_address{
+    min-height: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.rightIcon{
+    width: 20px;
+    height: 20px;
+}
+.checkoutOrder_addressText{
+    font-size: 16px;
+}
+.checkoutOrder_infoContent{
+    margin-top: 15px;
+    background-color: white;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.checkoutOrder_infoTitle{
+    padding-top: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.checkoutORder_infoService{
+    margin-top: 10px;
+}
+.checkoutOrder_infoService{
+    margin-top: 15px;
+}
+.checkoutOrder_serviceItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.checkoutOrder_serviceLable{
+    font-size: 14px;
+    flex-shrink: 0;
+}
+.checkoutOrder_servicePlaceHolder{
+    font-size: 13px;
+    margin-right: 10px;
+    color: #939292;
+}
+.fieldIcon{
+    width: 15px;
+    height: 15px;
+    transform: rotate(90deg);
+    opacity: 0.5;
+    position: relative;
+    top: 1px;
+}
+.checkoutOrder_serviceOther{
+    display: flex;
+}
+.checkoutOrder_serviceTextarea{
+    text-align: left;
+    width: calc(100% - 100px);
+    display: flex;
+    justify-content:flex-end;
+    flex: 1;
+    margin-left: 30px;
+}
+.checkoutOrder_placeholder{
+    font-size: 13px;
+    text-align: left;
+    display: flex;
+    justify-content:flex-end;
+}
+.checkoutOrder_textarea{
+    text-align: right;
+    height: 80px;
+    font-size: 14px;
+}
+.checkoutOrder_serviceValue{
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+.checkoutOrder_serviceValueData{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 0px;
+    margin-right: 10px;
+    height: 100%;
+
+    align-items: center;
+
+
+}
+.checkoutOrder_addressInfo{
+    font-size: 13px;
+}
+.checkoutOrder_userInfo{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+
+}

@@ -1,0 +1,50 @@
+/* pages/login/login.wxss */
+.login_Container{
+    height: 100vh;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.login_form{
+    margin-top: 80px;
+    border: 1px solid red;
+    padding: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+}
+.form_title{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 23px;
+    font-weight: 900;
+}
+.btn_content{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.wechat_btn{
+    margin-left: 20px;
+  
+}
+.wechat_icon{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    margin-right: 3px;
+}
+.login_wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_tips{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+    color: rgb(156, 156, 156);
+    margin-bottom: 10px;
+}

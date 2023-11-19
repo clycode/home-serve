@@ -1,0 +1,16 @@
+<view class="orderItem_container" bind:tap="onClick">
+    <view class="orderItem_time">
+        <view>
+       下单时间 : {{createTime}}
+        </view>
+    <view style="color:{{orderStatus.color}}">
+        {{orderStatus.name}}
+    </view>
+    </view>
+    <view class="orderItem_Mainer">
+        <view class="orderItem_serviceTitle">{{ serviceData.title}}</view>
+        <view class="orderItem_lable">预约时间: <text class="orderItem_value">{{startTime}}</text> </view>
+        <view class="orderItem_lable">服务地址: <text class="orderItem_value">{{addressData}}</text>  </view>
+        <view class="orderItem_lable">合计:<text class="orderItem_price">¥ {{orderData.totalPrice || '-'}}</text></view>
+    </view>
+</view>

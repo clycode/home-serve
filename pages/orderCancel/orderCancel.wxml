@@ -1,0 +1,20 @@
+<navigation-bar title="取消订单" back="{{true}}" color="black"  background="#fff">
+   
+</navigation-bar>
+<view class="orderCancel_container">
+        <!-- <view class="orderCancel_lable">亲爱的用户，请输入您觉得不满意的服务或者建议:</view> -->
+        <van-cell-group>
+        <van-field
+           model:value="{{ returnReason }}"
+            label="建议:"
+            title-width="60px"
+            required
+            type='textarea'
+            autosize
+            maxlength="{{200}}"
+            placeholder="请输入您的建议"
+        />
+        </van-cell-group>
+        <view class="orderCancel_tips">亲爱的用户，不好意思对您造成不好的服务体验，为了更好的为您服务，请您输入此次服务不满意的点或者建议，我们将悉心听取改正!</view>
+        <view class="orderCancel_btn"><van-button bind:click="onSubmit" disabled="{{!returnReason}}" block round type="info">确认取消</van-button></view>
+</view>

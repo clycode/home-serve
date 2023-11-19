@@ -1,0 +1,14 @@
+<!--pages/order/order.wxml-->
+<navigation-bar title="订单" back="{{false}}" color="black"  background="#fff"></navigation-bar>
+<view  class="order_container">
+    <van-tabs active="{{ active }}" bind:change="onChange" >
+        <van-tab wx:for="{{tabs}}" title="{{item.title}}" name="{{item.name}}" wx:key="name" >
+            <van-empty wx:if="{{orderData[item['name']].length ===0}}" description="空空如也,快去下单体验吧" />
+            <scroll-view bind:scrolltolower="onScroll"  scroll-y="{{true}}" class="order_itemWarpper" wx:else>
+                <OrderItem wx:for="{{orderData[item['name']]}}" 
+                wx:for-item="value" orderData="{{value}}" wx:key="orderId"></OrderItem>
+                <view wx:if="{{statusTotal[active]===orderData[active].length}}" class="order_deep">已经到底了.....</view>
+            </scroll-view>
+        </van-tab>
+</van-tabs>
+</view>

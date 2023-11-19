@@ -1,0 +1,18 @@
+/* pages/orderCancel/orderCancel.wxss */
+.orderCancel_container{
+    padding: 10px;
+    height: calc(100vh - 120px);
+}
+.orderCancel_lable{
+    font-size: 14px;
+    color: rgb(99, 99, 99);
+}
+.orderCancel_tips{
+    margin-top: 10px;
+    font-size: 13px;
+    color: #6d6d6d;
+    padding-left: 10px;
+}
+.orderCancel_btn{
+    margin-top: 20px;
+}

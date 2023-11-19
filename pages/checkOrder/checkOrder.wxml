@@ -1,0 +1,107 @@
+<!--pages/checkOrder/checkOrder.wxml-->
+<navigation-bar title="提交订单" back="{{true}}" color="back"  background="#fff" backUrl="/pages/service/service?id={{serviceInfo.id}}" ></navigation-bar>
+<scroll-view class="checkoutOrder_container">
+    <view class="checkoutOrder_info">
+        <view class="checkoutOrder_address" bind:tap="toChooseAddress">
+            <view>
+            <view wx:if="{{!addressInfo}}" class="checkoutOrder_addressText">请选择您的地址</view>
+            <view wx:else class="checkoutOrder_addressInfo">
+                <view  class="checkoutOrder_userInfo">
+                    <text>服务信息 : {{addressInfo.userName}}</text>
+                    <text style="margin-left: 15px;">{{addressInfo.phone}}</text>
+                </view>
+                <view style="margin-top: 5px;">
+                    <text>详细信息 : {{addressInfo.city}}</text>
+                    <text >{{addressInfo.street}}</text>
+                </view>
+                <view>
+               
+            </view>
+            </view>
+        </view>
+            <image src="/public/account/icon-right.png" class="rightIcon"></image>
+        </view>
+        
+        <view class="checkoutOrder_infoContent">
+            <view class="checkoutOrder_infoTitle">服务要求</view>
+            <view class="checkoutOrder_infoService">
+                    <view wx:for="{{serviceList}}" wx:key="dataField" >
+                        <view class="checkoutOrder_serviceItem" class="checkoutOrder_serviceItem"            
+                        style="opacity:{{item.disabled?'0.3':'1'}}"
+                         bind:tap="onClick"
+                            data-disabled="{{item.disabled}}"
+                            data-dataField="{{item.dataField}}"
+                             data-type="{{item.type}}">
+                            <view class="checkoutOrder_serviceLable">
+                                {{item.field}}
+                            </view>
+                            <view class="checkoutOrder_serviceValue">
+                                <view wx:if="{{serviceData[item.dataField]}}" class="checkoutOrder_serviceValueData" >
+                                    {{serviceData[item.showField]}}
+                                </view>
+                                <text class="checkoutOrder_servicePlaceHolder" wx:else >请{{item.field}}</text>
+                                <image src="/public/account/icon-right.png" class="fieldIcon"></image>
+                            </view>
+                        </view>
+                        <van-divider />
+                    </view>
+                <view class="checkoutOrder_serviceOther">
+                    <view class="checkoutOrder_serviceLable">其他要求</view>
+                    <view class="checkoutOrder_serviceTextarea">
+                        <textarea maxlength="{{200}}" show-confirm-bar="{{true}}" value="{{remark}}" placeholder="请输入其他要求"  class="checkoutOrder_textarea"  bind:input="onRemarkChange" placeholder-class="checkoutOrder_placeholder" ></textarea>
+                    </view>
+                </view>
+                
+            </view>
+        </view>
+    </view>
+
+</scroll-view>
+<van-popup z-index="{{999999}}" show="{{ pickerShow }}"  bind:close="onClose"   position="bottom">
+<!--数字选择框 -->
+    <van-picker wx:if="{{pickerType.indexOf('number')!==-1 && pickerType!=='day' && pickerType!=='day-time'}}" show-toolbar="{{true}}"
+    bind:cancel="onCancel"
+    title="选择{{pickerType==='number-30'?'天数':'时长'}}"
+ bind:confirm="onNumberPickerConfirm" columns="{{ columns }}" />
+<van-datetime-picker
+  wx:if="{{pickerType==='day'}}"
+  type="date"
+  title="选择日期"
+  show-toolbar="{{true}}"
+  value="{{ serviceData.startTime }}"
+  min-date="{{ minDate }}"
+  max-date="{{ maxDate }}"
+  bind:input="onInput"
+  bind:cancel="onCancel"
+  bind:confirm="onDatePickerConfirm" 
+/>
+<van-datetime-picker
+  wx:if="{{pickerType==='day-time'}}"
+  type="datetime"
+  title="选择时间"
+  show-toolbar="{{true}}"
+  value="{{ serviceData.startTime }}"
+  min-date="{{ minDate }}"
+  min-hour="{{8}}"
+  max-hour="{{18}}"
+  max-minute="{{0}}"
+  filter="{{ filter }}"
+  max-date="{{ maxDate }}"
+  bind:input="onInput"
+  bind:cancel="onCancel"
+  bind:confirm="onDatePickerConfirm" 
+/>
+
+</van-popup>
+<!-- 日期选择框 -->
+
+
+<van-submit-bar
+  price="{{type==='day'?serviceData.timeTotal * serviceInfo.discountPrice * 100 :serviceInfo.discountPrice * 100}}"
+  loading="{{submitLoading}}"
+  button-text="提交订单"
+  bind:submit="onSubmit"
+  disabled="{{!addressInfo || !serviceInfo || !serviceData.startTime}}"
+  bind:submit="onSubmit"
+/>
+<van-toast id="van-toast" />

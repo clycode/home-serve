@@ -1,0 +1,94 @@
+<navigation-bar title="订单信息" back="{{true}}" color="black"  background="#fff"></navigation-bar>
+<scroll-view scroll-y="{{true}}" class="orderInfo_container">
+    <view class="orderInfo_header">
+        <view class="orderInfo_status">
+            <view >
+                <text style="color: {{OrderStatus[orderInfo.orderStatus].color}};" class="orderInfo_statusText">{{OrderStatus[orderInfo.orderStatus].name}}</text>
+            </view>
+            <view class="orderInfo_bgWrapper">
+                <image class="orderInfo_bg" src="/public/order/bg_orderInfo.jpg"></image>
+                
+            </view>
+        </view>
+        <view class="orderInfo_address">
+            <image class="orderInfo_addressIcon" src="/public/account/iocn-address-account.png" />
+            <view class="orderInfo_addressInfo">
+                <view>
+                    {{addressInfo.userName}}
+                    <text>{{addressInfo.phone}}</text>
+                </view>
+                <view>
+                {{
+                    addressInfo?addressInfo.city + '' + addressInfo.street :'待确认'
+                }}
+                </view>
+               
+            </view>
+        </view>
+    </view>
+    <view class="orderInfo_serviceInfoWarpper">
+    <view class="orderInfo_serviceInfoBox">
+        <view class="orderInfo_serviceIconBox" style="background-color: {{serviceInfo.iconBgColor}};">
+            <image class="orderInfo_serviceIcon" src="{{serviceInfo.iconUrl}}"></image>  
+        </view>  
+        <view class="orderInfo_serviceInfo">
+            <view class="orderInfo_serviceName">
+                <view class="orderInfo_serviceTitle">
+                    {{serviceInfo.title}}
+                </view>
+                <text class="orderInfo_servicePrice">¥ {{serviceInfo.discountPrice}}</text>
+            </view>
+            <view class="orderInfo_desc">
+                {{serviceInfo.desc}}
+            </view>
+        </view>  
+    </view>
+    <view class="orderInfo_serviceTotalPrice">
+        <view>
+            服务总价
+        </view>
+        <text>¥ {{orderInfo.totalPrice || '-' }}</text>
+    </view>
+    </view>
+    <view class="orderInfo_starTime">
+        <view class="orderInfo_timeLable">
+            <image class="orderInfo_timeIcon" src="/public/account/icon-time.png"></image>
+            <text>预约时间</text>
+        </view>
+        <view class="orderInfo_timeValue">{{startTime}}</view>
+    </view>
+    <view class="orderInfo_box">
+        <view class="orderInfo_item">
+            <view class="orderInfo_lable">订单编号</view>
+            <view class="orderInfo_value">{{orderInfo.orderId}}</view>
+        </view>
+        <view class="orderInfo_item" >
+            <view class="orderInfo_lable">下单时间</view>
+            <view class="orderInfo_value">{{createTime}}</view>
+        </view>
+        <view class="orderInfo_item">
+            <view class="orderInfo_lable">支付时间</view>
+            <view class="orderInfo_value">{{payTime}}</view>
+        </view>
+        <view class="orderInfo_item">
+            <view class="orderInfo_lable">其他要求</view>
+            <view class="orderInfo_value">{{orderInfo.remark || '-'}}</view>
+        </view>
+    </view>
+  
+</scroll-view>
+<view class="orderInfo_footerBtnWarpper" wx:if="{{orderStatus!=='FINISH'}}">
+    <view class="orderInfo_btnBox">
+                <van-button wx:if="{{orderInfo.orderStatus==='WAIT_PAY' || orderInfo.orderStatus==='WAIT_SERVICE' || orderInfo.orderStatus==='WAIT_COMFIRM'}}" bind:click="onCancel"  size="small">取消订单</van-button>
+                <van-button wx:if="{{orderInfo.orderStatus==='WAIT_PAY'}}" style="margin-left:10px" size="small" type="info" plain bind:click="onPay">立即支付</van-button>
+
+                <van-button wx:if="{{orderInfo.orderStatus==='WAIT_COMFIRM'}}" style="margin-left:10px" size="small" type="info" bind:click="onComfirm" plain>立即确认</van-button>
+
+                <van-button wx:if="{{orderInfo.orderStatus==='FINISH'}}" style="margin-left:10px" size="small" type="info" plain>立即评价</van-button>
+
+                
+
+                <van-button wx:if="{{orderInfo.orderStatus==='PROGRESS'}}" style="margin-left:10px" size="small" bind:click="onFinish" type="info" plain>确认完成</van-button>
+    </view>
+</view>
+<van-toast id="van-toast" />

@@ -1,0 +1,164 @@
+/* pages/orderInfo/orderInfo.wxss */
+.orderInfo_container{
+    margin-top: 10px;
+    height: 100vh;
+    background-color: #e9e8e8b0;
+    position: relative;
+    /* background:linear-gradient(180deg,rgba(241, 56, 10, 0.952),rgb(253, 247, 247) ) ; */
+}
+.orderInfo_header{
+    background-color: white;
+}
+.orderInfo_status{
+    margin-top: 5px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.orderInfo_statusText{
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    top: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.orderInfo_bgWrapper{
+    flex-shrink: 0;
+}
+.orderInfo_bg{
+    width: 90px;
+    height: 60px;
+}
+.orderInfo_address{
+    border-top: 1px solid rgba(231, 231, 231, 0.801);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+.orderInfo_addressIcon{
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+.orderInfo_addressInfo{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.orderInfo_serviceInfoBox{
+   
+    display: flex;
+    align-items: flex-start;
+}
+.orderInfo_serviceInfoWarpper{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.orderInfo_serviceTotalPrice{
+    margin-top: 10px;
+    border-top: 1px solid #d4d4d4;
+    font-size: 14px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.orderInfo_serviceIconBox{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    background-color: rgb(253, 28, 28);
+}
+.orderInfo_serviceIcon{
+    width: 30px;
+    height: 30px;
+}
+.orderInfo_serviceInfo{
+    margin-left: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.orderInfo_serviceName{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.orderInfo_serviceTitle{
+    font-size: 16px;
+    font-weight: 600;
+}
+.orderInfo_servicePrice{
+    color: rgb(204, 88, 11);
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.orderInfo_desc{
+    font-size: 12px;
+    margin-top: 5px;
+    color: #4e4e4eb0;
+}
+.orderInfo_starTime{
+    margin: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.orderInfo_timeIcon{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    
+}
+.orderInfo_timeLable{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.orderInfo_timeValue{
+    font-size: 14px;
+    color: rgb(158, 158, 158);
+}
+.orderInfo_box{
+    margin: 10px;
+    background-color: white;
+    padding: 10px 10px 0 10px;
+    border-radius: 10px;
+}
+.orderInfo_item{
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.orderInfo_lable{
+    font-size: 13px;
+    color: rgb(148, 148, 148);
+}
+.orderInfo_value{
+    font-size: 13px;
+    margin-left: 20px;
+}
+.orderInfo_footerBtnWarpper{
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+}
+.orderInfo_btnBox{
+    padding: 10px;
+    padding-right:20px;
+    display: flex;
+    justify-content: flex-end;
+}

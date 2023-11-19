@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<navigation-bar title="E家助手" back="{{false}}" color="back"  background="#fff"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+<swiper class="swiper"  indicator-dots autoplay circular>
+    <swiper-item wx:for="{{posterList}}" wx:key="pId" data-link="{{item.link}}" bind:tap="toLink" class="home_swiperItem">
+        <image src="{{item.imageUrl}}" class="home_swiperImg"></image>
+    </swiper-item>
+</swiper>
+  <view class="index_Mainer">
+    <view class="home_serviceWarpper">
+        <view wx:for="{{serviceList}}" wx:key="title" class="home_serviceItem"  data-link="/pages/service/service?id={{item.id}}" bind:tap="toLink" >
+            <view class="home_serviceIconBox" style="background-color:{{item.iconBgColor}}">
+                <image src="/public/account/icon-about.png" class="home_serviceIcon"></image>
+            </view>
+            <view class="home_serviceTitle">{{item.title}}</view>
+        </view>
+        <view class="home_serviceItem home_allBtn" bind:tap="toAllLink">
+            <view class="home_serviceIconBox">
+            <image src="/public/index/icon-all.png" class="home_serviceIcon"></image>
+            </view>
+            <view class="home_serviceTitle">全部</view>
+        </view>
+    </view>
+    <view class="home_infoWarpper">
+        <view class="home_infoWarpperHeader">
+            <text class="home_infoWarpperTitle">热点资讯</text>
+            <view class="home_link"><navigator url="/pages/infomation/infomation" open-type="navigate"> 查看更多<van-icon name="arrow" /> </navigator></view>
+        </view>
+        <view class="home_infoWarpperMainer">
+            <view class="home_infoItem" wx:for="{{infoList}}" wx:key="title"> 
+                <view class="home_logoWarpper">
+                    <image src="/public/index/icon-logo.png" class="home_logo"></image>
+                </view>
+                <view class="home_infoData">
+                    <view class="home_infoName">{{appName}}</view>
+                    <view class="home_infoTime">{{item.createTime}}</view>
+                    <view class="home_infoContent ellipsis-4">
+                    <rich-text nodes="{{item.content}}"></rich-text>
+                </view>
+                </view>
+            </view>
+        </view>
+    </view>
+  </view>
+</scroll-view>

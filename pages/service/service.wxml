@@ -1,0 +1,43 @@
+<navigation-bar title="服务详情" back="{{true}}" color="black"  background="#fff"></navigation-bar>
+<scroll-view class="service_container" scroll-y="{{true}}">
+    <swiper class="service_swiper"  indicator-dots autoplay circular>
+    <swiper-item wx:for="{{serviceData.imagesUrl}}" wx:key="item">
+    <image src="{{item}}" class="service_swiperImg"  ></image>
+    </swiper-item>
+    
+</swiper>
+<view class="service_info">
+        <view class="service_header">
+        <view class="service_headerInfo">
+            <view class="service_infoTitle">{{serviceData.title}}</view>
+            <view class="service_infoDesc">{{serviceData.desc}}</view>
+            <view class="service_infoPrice">
+                <text class="service_infoDiscountPrice">¥{{serviceData.discountPrice}}</text>
+                <text class="service_infoOriginPrice">¥{{serviceData.originPrice}}</text>
+            </view>
+        </view>
+        <view class="service_collecIconWarpper" bind:tap="handleCollect">
+            <image src="{{!collected?' /public/service/icon-collec.png':'/public/service/icon-collected.png'}}" class="service_collecIcon"></image>
+            <view class="service_collecText" >{{collected ? '已':''}}收藏</view>
+        </view>
+        </view>
+        <view class="service_infoServe">
+            <view class="service_serveList">
+                <view class="service_serveItem" wx:for="{{serviceList}}" wx:key="{{item}}">{{item}}</view>
+            </view>
+        </view>
+        <view class="service_infoContent">
+            <view class="service_infoContentTitle">图文描述</view>
+            <view class="service_infoContentBox">
+                <rich-text nodes="{{serviceData.content}}"></rich-text>
+            </view>
+        </view>
+        
+</view>
+</scroll-view>
+
+<van-goods-action>
+  
+  <van-goods-action-button text="立即预约" bind:click="handlePay" />
+</van-goods-action>
+<van-toast id="van-toast" />

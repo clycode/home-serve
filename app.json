@@ -1,0 +1,107 @@
+{
+    "pages": [
+        "pages/review/review",
+        "pages/order/order",
+        "pages/orderCancel/orderCancel",
+        "pages/account/account",
+        "pages/account/pages/updatePassword/updatePassword",
+        "pages/account/pages/updateInfo/updateInfo",
+        "pages/index/index",
+        "pages/infomationData/infomationData",
+        "pages/category/category",
+        "pages/pay/pay",
+        "pages/orderInfo/orderInfo",
+        "pages/checkOrder/checkOrder",
+        "pages/service/service",
+        "pages/account/pages/adress/adress",
+        "pages/account/pages/addressInfo/addressInfo",
+        "pages/account/pages/about/about",
+        "pages/account/pages/collect/collect",
+        "pages/login/login",
+        "pages/loginInfo/loginInfo",
+        "pages/updateInfo/updateInfo",
+        "pages/infomation/infomation"
+    ],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    },
+    "tabBar": {
+        "selectedColor": "1296db",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "主页",
+                "iconPath": "/public/tabBar/home.png",
+                "selectedIconPath": "/public/tabBar/home_seleted.png"
+            },
+            {
+                "pagePath": "pages/category/category",
+                "text": "分类",
+                "iconPath": "/public/tabBar/category.png",
+                "selectedIconPath": "/public/tabBar/category_seleted.png"
+            },
+            {
+                "pagePath": "pages/order/order",
+                "text": "订单",
+                "iconPath": "/public/tabBar/order.png",
+                "selectedIconPath": "/public/tabBar/order_seleted.png"
+            },
+            {
+                "pagePath": "pages/account/account",
+                "text": "我的",
+                "iconPath": "/public/tabBar/account.png",
+                "selectedIconPath": "/public/tabBar/account_seleted.png"
+            }
+        ]
+    },
+    "renderer": "skyline",
+    "rendererOptions": {
+        "skyline": {
+            "defaultDisplayBlock": true,
+            "disableABTest": true,
+            "sdkVersionBegin": "3.0.0",
+            "sdkVersionEnd": "15.255.255"
+        }
+    },
+    "componentFramework": "glass-easel",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents",
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index",
+        "navigation-bar": "/components/navigation-bar/navigation-bar",
+        "van-field": "@vant/weapp/field/index",
+        "van-dialog": "@vant/weapp/dialog/index",
+        "van-overlay": "@vant/weapp/overlay/index",
+        "van-loading": "@vant/weapp/loading/index",
+        "van-nav-bar": "@vant/weapp/nav-bar/index",
+        "van-toast": "@vant/weapp/toast/index",
+        "van-goods-action": "@vant/weapp/goods-action/index",
+        "van-goods-action-icon": "@vant/weapp/goods-action-icon/index",
+        "van-goods-action-button": "@vant/weapp/goods-action-button/index",
+        "van-card": "@vant/weapp/card/index",
+        "van-empty": "@vant/weapp/empty/index",
+        "van-submit-bar": "@vant/weapp/submit-bar/index",
+        "van-divider": "@vant/weapp/divider/index",
+        "van-picker": "@vant/weapp/picker/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+        "van-area": "@vant/weapp/area/index",
+        "van-checkbox": "@vant/weapp/checkbox/index",
+        "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "van-icon": "@vant/weapp/icon/index",
+        "van-notice-bar": "@vant/weapp/notice-bar/index",
+        "van-uploader": "@vant/weapp/uploader/index",
+        "van-rate": "@vant/weapp/rate/index"
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序的位置功能"
+        },
+        "scope.phoneNumber": {
+            "desc": "我们需要获取您的手机号码来进行登陆"
+        }
+    }
+}

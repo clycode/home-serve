@@ -1,0 +1,28 @@
+<navigation-bar title="评论" back="{{true}}" color="black"  background="#fff"></navigation-bar>
+<view class="review_container">
+    <view class="review_rate">
+        <view class="review_rateLable">评分:</view>
+        <view>
+            <van-rate
+                value="{{ value }}"
+                size="{{ 25 }}"
+                color="#ffd21e"
+                void-icon="star"
+                void-color="#eee"
+                bind:change="onChange"
+                />
+</view>
+    </view>
+    <van-field
+        model:value="{{ content}}"
+        clearable
+        titleWidth="40px"
+        label="描述"
+        type="textarea"
+        autosize
+        maxlength="300"
+        placeholder="请输入您的服务体验"
+        bind:click-icon="onClickIcon"
+    />    
+    <view class="review_btn"><van-button block type="info" round disabled="{{!rate}}">提交</van-button></view>
+</view>

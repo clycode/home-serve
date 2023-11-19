@@ -1,0 +1,21 @@
+/* pages/infomationData/infomationData.wxss */
+.infomationdData_container{
+    height: calc(100vh - 80px);
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+.infomationData_title{
+    font-size: 24px;
+}
+.infomationData_time{
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(112, 110, 110);
+}
+.infomationData_content{
+    margin-top: 20px;
+    text-align: left;
+    font-size: 14px;
+    padding: 0 15px;
+}

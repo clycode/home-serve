@@ -1,0 +1,21 @@
+/* pages/pay/pay.wxss */
+.pay_container{
+    height: 100vh;
+    padding:20px;
+    color: rgb(124, 124, 124);
+    font-size: 14px;
+    border-top: 1px solid rgb(228, 228, 228);
+    font-family:'Times New Roman', Times, serif;
+}
+.pay_Info{
+    text-align: center;
+    margin-top: 30px;
+}
+.pay_appInfo{
+    font-size: 18px;
+}
+.pay_totalPrice{
+    font-size: 40px;
+    margin-top: 20px;
+    color: rgb(212, 14, 14);
+}

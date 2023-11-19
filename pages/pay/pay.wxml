@@ -1,0 +1,14 @@
+<!--pages/pay/pay.wxml-->
+<navigation-bar title="确认订单" back="{{true}}" color="black"  background="#fff"></navigation-bar>
+<view class="pay_container">
+    <view class="pay_orderId">订单号: {{orderId}}</view>
+    <view class="pay_Info">
+        <view class="pay_appInfo">{{appName}}</view>
+        <view class="pay_totalPrice">¥ {{totalPrice}}</view>
+    </view>
+</view>
+<van-goods-action>
+  
+  <van-goods-action-button bind:tap="onPay" text="立即支付" bind:click="onClickButton" />
+</van-goods-action>
+<van-toast id="van-toast" />
