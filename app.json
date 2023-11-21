@@ -1,12 +1,14 @@
 {
     "pages": [
-        "pages/review/review",
+        "pages/index/index",
+
+        "pages/account/pages/reviewList/reviewList",
         "pages/order/order",
-        "pages/orderCancel/orderCancel",
         "pages/account/account",
+        "pages/review/review",
+        "pages/orderCancel/orderCancel",
         "pages/account/pages/updatePassword/updatePassword",
         "pages/account/pages/updateInfo/updateInfo",
-        "pages/index/index",
         "pages/infomationData/infomationData",
         "pages/category/category",
         "pages/pay/pay",
@@ -21,6 +23,7 @@
         "pages/loginInfo/loginInfo",
         "pages/updateInfo/updateInfo",
         "pages/infomation/infomation"
+       
     ],
     "window": {
         "navigationBarTextStyle": "black",

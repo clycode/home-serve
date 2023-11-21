@@ -84,7 +84,7 @@
 
                 <van-button wx:if="{{orderInfo.orderStatus==='WAIT_COMFIRM'}}" style="margin-left:10px" size="small" type="info" bind:click="onComfirm" plain>立即确认</van-button>
 
-                <van-button wx:if="{{orderInfo.orderStatus==='FINISH'}}" style="margin-left:10px" size="small" type="info" plain>立即评价</van-button>
+                <van-button wx:if="{{orderInfo.orderStatus==='FINISH' && !orderInfo.isReviewed}}" style="margin-left:10px" size="small" type="info" bind:click="onReview"  plain>立即评价</van-button>
 
                 
 

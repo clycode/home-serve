@@ -1,0 +1,9 @@
+/* pages/reviewList/reviewList.wxss */
+.reviewList_container{
+    height: calc(100vh - 80px);
+}
+.reviewItem_content{
+    margin-top: 10px;
+    padding-left: 5px;
+    font-size: 14px;
+}

@@ -19,7 +19,7 @@
     </view>
 </view>
 <view wx:else>
-    <van-empty description="暂无收藏,请求添加叭" />
+    <van-empty description="暂无收藏,快去添加叭" />
 </view>
 </scroll-view>
 <van-toast id="van-toast" />

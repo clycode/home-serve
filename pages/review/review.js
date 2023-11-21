@@ -1,3 +1,5 @@
+import { createReview } from "../../api/review";
+
 // pages/review/review.js
 Page({
 
@@ -6,20 +8,42 @@ Page({
      */
     data: {
         content:'',
-        rate:''
+        rate:'',
+        orderId:'',
+        serviceId:'',
+        loading:false
     },
     onChange(event) {
         this.setData({
-          rate: event.detail,
+          rate: event.detail ,
         });
       },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.setData({
+            orderId:options.orderId,
+            serviceId:+options.serviceId
+        })
     },
-
+    onSubmit(){
+        this.setData({
+            loading:true
+        })
+        createReview(this.data).then((res)=>{
+            wx.showToast({
+              title: '评论成功',
+            })
+            setTimeout(()=>{
+                wx.navigateBack()
+            },500)
+        }).finally(()=>{
+            this.setData({
+                loading:false
+            })
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

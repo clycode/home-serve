@@ -10,7 +10,7 @@
     <view class="home_serviceWarpper">
         <view wx:for="{{serviceList}}" wx:key="title" class="home_serviceItem"  data-link="/pages/service/service?id={{item.id}}" bind:tap="toLink" >
             <view class="home_serviceIconBox" style="background-color:{{item.iconBgColor}}">
-                <image src="/public/account/icon-about.png" class="home_serviceIcon"></image>
+                <image src="{{item.iconUrl}}" class="home_serviceIcon"></image>
             </view>
             <view class="home_serviceTitle">{{item.title}}</view>
         </view>

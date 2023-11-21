@@ -20,7 +20,7 @@ Page({
         },{
             name:'我的评论',
             src:'/public/account/icon-comment.png',
-            link:'/'
+            link:'/pages/account/pages/reviewList/reviewList'
         },{
             name:'修改信息',
             src:'/public/account/icon-edit.png',

@@ -1,6 +1,7 @@
 import { finishOrder, getOrderInfo, updateOrder } from "../../api/order";
 import {OrderStatus} from "../../constant/order";
 import dayjs from "dayjs";
+import { setPathQuery } from "../../untils/common";
 // pages/orderInfo/orderInfo.js
 Page({
 
@@ -66,12 +67,18 @@ Page({
           })
     },
     onFinish(){
-        console.log(this.data);
-        console.log('------------aaaa')
         const {orderId}=this.data;
        finishOrder(this.data.orderId).then(()=>{
            this.getData(orderId)
        })
+    },
+    onReview(){
+        const {orderId}=this.data;
+        const serviceId=this.data.serviceInfo.id;
+        const  url=setPathQuery('/pages/review/review',{orderId,serviceId})
+        wx.navigateTo({
+            url
+        })
     },
     onCancel(){
         wx.showModal({

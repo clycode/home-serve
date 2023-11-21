@@ -1,0 +1,32 @@
+<navigation-bar title="我的评论" back="{{true}}" color="black"  background="#fff"></navigation-bar>
+<scroll-view scroll-y="{{true}}" class="reviewList_container">
+    <view wx:if="{{reviewList && reviewList.length!==0}}">
+    <view  wx:for="{{reviewList}}" wx:key="{{id}}">
+    <van-card
+        link-type="reLaunch"
+        lazy-load="{{true}}"
+        thumb="{{ item.service.imagesUrl }}"
+>
+<view slot="title">
+    <van-rate   
+    size="{{ 20 }}"
+    color="#ffd21e"
+    void-icon="star"
+    void-color="#eee" value="{{ item.rate }}"   readonly />
+</view>
+<view  slot="desc" >
+    <view class="ellipsis-3 reviewItem_content">
+        {{item.content}}
+    </view>
+</view>
+<view slot="footer">
+    <van-button type="info"  data-id="{{item.service.id}}" bind:tap="toLink" size="small" >查看服务</van-button>
+    <van-button data-id="{{item.id}}"  style="margin-left: 10px;" plain size="small" bind:tap="onDel" >删除评价</van-button>
+  </view>
+</van-card>
+    </view>
+</view>
+<view wx:else>
+    <van-empty description="暂无评论,快去下单体验叭" />
+</view>
+</scroll-view>
