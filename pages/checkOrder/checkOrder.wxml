@@ -102,6 +102,5 @@
   button-text="提交订单"
   bind:submit="onSubmit"
   disabled="{{!addressInfo || !serviceInfo || !serviceData.startTime}}"
-  bind:submit="onSubmit"
 />
 <van-toast id="van-toast" />

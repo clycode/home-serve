@@ -56,13 +56,13 @@ Page({
                 }
                 if(orderList && orderList.length>0){
                     pageMap[type]=params.page
-                    orderData[type]=[...orderList.map((item)=>{
+                    orderData[type]=[...(orderData[type] || []),...orderList.map((item)=>{
                         return {
                             ...item,
                             addressCache:item.addressCache?JSON.parse(item.addressCache):'',
                             serviceCache:item.serviceCache?JSON.parse(item.serviceCache):''
                         }
-                    }),...(orderData[type] || [])]
+                    })]
                     this.setData({pageMap,orderData,statusTotal})
                 }
                
